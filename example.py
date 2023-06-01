@@ -12,5 +12,9 @@ def root():
 def webhook():
     return {"message": "webhook is working"}
 
+@app.get("/webhook")
+def webhook():
+    return {"message": "webhook /get is working"}
+
 
 handler = Mangum(app)
